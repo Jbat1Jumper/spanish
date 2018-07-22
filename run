@@ -23,7 +23,7 @@ def cli():
 
 
 @cli.command()
-def make():
+def prepare():
     log.info('Please download the samples from the following link and put them in this directory')
     log.info(' -> https://www.kaggle.com/rtatman/120-million-word-spanish-corpus#spanish_corpus.zip')
     
@@ -95,6 +95,12 @@ def clean():
 
     log.info('Removing {}'.format(NEW_ZIPFILE))
     os.remove(NEW_ZIPFILE)
+
+
+@cli.command()
+def fixer():
+    run("cargo run")
+
 
 if __name__ == '__main__':
     cli()
