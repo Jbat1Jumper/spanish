@@ -2,6 +2,25 @@
 Spanish, o Español
 ==================
 
+Instrucciones para correrlo
+---------------------------
+
+El punto de entrada para esto es el script de python `./run`. Se puede ver los
+comandos disponibles y que hacen utilizando:
+
+```
+$ ./run help
+```
+
+**Notas**: No freezé las dependencias por lo que puede que haya que instalar algunos
+paquetes. También hay algunas excepciones que ocurren a la hora de hacer el
+clean si el build quedó por la mitad, debidos a que espera que todos los
+archivos a borrar existan. Creo que arreglar eso es más rápido que explicarlo
+por escrito como ahora, pero se fixeará en algún momento.
+
+Log
+===
+
 22 de Julio
 -----------
 
