@@ -1,0 +1,10 @@
+[package]
+name = "acentuación-del-castellano"
+version = "0.1.0"
+authors = ["Nikita Zdanovitch <nzdanovitch@gmail.com>"]
+
+[dependencies]
+log = "0.4"
+simple_logger = "0.5"
+xml-rs = "0.8"
+zip = "0.4"
