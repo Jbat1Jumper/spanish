@@ -19,11 +19,17 @@ NEW_ZIPFILE = 'spanish_corpus.utf8.zip'
 
 @click.group()
 def cli():
+    """
+    This script is a tool to interact easily with the proyect and prepare the data.
+    """
     pass
 
 
 @cli.command()
 def prepare():
+    """
+    Prepare the data to process it with rust.
+    """
     log.info('Please download the samples from the following link and put them in this directory')
     log.info(' -> https://www.kaggle.com/rtatman/120-million-word-spanish-corpus#spanish_corpus.zip')
     
@@ -79,6 +85,9 @@ def fix_line(line):
 
 @cli.command()
 def clean():
+    """
+    Delete the files created with 'prepare'. Does not delete the original corpus file.
+    """
     for f in os.listdir(UNZIPPED_DIR):
         log.info('Removing {}'.format(f))
         os.remove(path.join(UNZIPPED_DIR, f))
@@ -99,6 +108,9 @@ def clean():
 
 @cli.command()
 def fixer():
+    """
+    This should run the rust code to parse an XML file, fix the errors and write the result to another file.
+    """
     run("cargo run")
 
 

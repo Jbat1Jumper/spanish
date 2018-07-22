@@ -9,7 +9,20 @@ El punto de entrada para esto es el script de python `./run`. Se puede ver los
 comandos disponibles y que hacen utilizando:
 
 ```
-$ ./run help
+$ ./run --help
+
+#  Usage: run [OPTIONS] COMMAND [ARGS]...
+#  
+#    This script is a tool to interact easily with the proyect and prepare the
+#    data.
+#  
+#  Options:
+#    --help  Show this message and exit.
+#  
+#  Commands:
+#    clean    Delete the files created with 'prepare'.
+#    fixer    This should run the rust code to parse an XML...
+#    prepare  Prepare the data to process it with rust.
 ```
 
 **Notas**: No freezé las dependencias por lo que puede que haya que instalar algunos
